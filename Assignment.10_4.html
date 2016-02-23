@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app="myMod">
+<head>
+    <!-- Assignment – Make two controllers with scope. -->
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://localhost:56130/angular.min.js"></script>
+
+    <script type="text/javascript">
+        var myMod = new angular.module('myMod', []);
+
+        myMod.controller('mycontroller1', function ($scope) {
+            $scope.message = "This is Controller ONE";
+        });
+
+        myMod.controller('mycontroller2', function ($scope) {
+            $scope.message = "This is Controller TWO";
+        });
+    </script>
+</head>
+<body ng-app="myMod">
+    <div ng-controller="mycontroller1">
+        The message of controller one is {{message}}!!
+    </div>
+    <div ng-controller="mycontroller2">
+        The message of controller two is {{message}}!!
+    </div>
+</body>
+</html>
